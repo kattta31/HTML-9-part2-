@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Сайт на HTML5 от LABELCOM.BY</title>
+		<!--[if IE]>
+			<script>
+				document.createElement('header');
+				document.createElement('nav');
+				document.createElement('section');
+				document.createElement('article');
+				document.createElement('aside');
+				document.createElement('footer');
+			</script>
+		<![endif]-->
+		<style type="text/css">
+/* обнуляем все элементы */
+			* 
+				{
+				margin:0;
+				padding:0;
+				outline:none;
+				}  
+				
+/* --- Общие стили --- */ 
+			
+			html 
+				{
+				font-size:75%;
+				height:100%;
+				} 
+			body 
+				{
+				font:normal 1em/1.3 Yu Gothic UI Light, Calibri light,arial, helvetica, sans-serif;
+				color:#333;height:100%;
+				background:#f0f0f0;
+				} 
+			a 
+				{
+				color:#2b82dc;
+				}
+			aside:hover a, footer:hover a, p:hover a 
+				{
+				color:#0E6994;
+				} 
+			a:hover 
+				{
+				text-decoration:none;
+				color:#0E6994;
+				} 
+			abbr 
+				{
+				border-bottom:1px dotted #2b82dc;
+				cursor:help;
+				} 
+			h1, h2, h3, h4, h5, h6 
+									{
+									font-weight:normal;
+									line-height:1;
+									margin:4px 0 12px;
+									padding:4px;
+									color: gray;
+									} 
+			h1 
+				{
+				font-size:1.88em;
+				
+				} 
+				
+			
+			li 
+				{
+				margin-bottom:10px;
+				}
+			
+			ul 
+				{
+				list-style:none;
+				} 
+			ol 
+				{
+				list-style-position:inside;
+				}
+			
+			summary 
+					{
+					margin-left:1em;
+					font-weight:bold;
+					color: #2ca9e4;
+					}
+			form 
+				{
+				margin:1em;
+				padding:.5em;
+				}
+			
+			/* делаем семантические тэги - блочными */ 	
+			header, nav, article, aside, footer 
+														{
+														display:block;
+														position:relative;
+														} 
+														
+			/* выравниваем страницу по центру, делаем отступы и цвет фона */ 			
+			#main 
+				{
+				width:950px;
+				min-height:100%;
+				padding:0 0px;
+				margin:0 auto;
+				background:#fff;
+				} 
+				
+			/* пишем класс для шапки - header */ 			
+			.h 
+				{
+				overflow:hidden;
+				height:150px
+				} 
+			.h img {
+				float:left;}
+			.h h1 {
+			font:normal  Droid Serif, helvetica, sans-serif;
+            margin-top: 50px;
+				}
+			.h div {
+            height: 5%;
+            vertical-align: middle;
+				}
+	
+				
+			/* меню навигации */ 
+			nav 
+				{
+				font-size:1.25em;
+				width:170px;
+				height:220px;
+				float: left;
+				background:#4f4e4e;
+				margin-top: 22px;
+				/* border-radius:20px;*/
+				} 
+			nav li 
+					{
+					float:left;
+					margin:8px 20px 2px;
+					} 
+			nav a 
+					{
+					font-weight:bold;
+					text-decoration:none;
+					color:#fff;
+					} 
+			nav a:hover 
+						{
+						text-decoration:underline;
+						color:#fff;
+						} 
+			
+			/* область основного контента */ 
+			section 
+					{
+					overflow:hidden;
+					margin-right: 20px;
+					}
+					
+			/* стиль для картинки */ 
+			
+			figure {
+					padding: 10px; /* Поля вокруг */
+					display: block; /* Блочный элемент */
+					width: 550px; /* Ширина */
+					margin: 0 10px 10px 0; /* Отступы */
+					text-align: center; /* Выравнивание по центру */
+				   }
+			figcaption {
+						color: #2ca9e4; /* Цвет текста */
+						font-size:1.2em;
+					   }		
+			 mark {
+					background: #ffec82;
+					padding: 1px 3px;
+					border: 1px dashed #333;
+				   }
+			/* внутренняя область контента */ 
+			
+							
+			/* правая часть */ 
+			aside 
+				{
+				margin-left: 50px;
+				overflow:hidden;
+				width:100%;
+				height:100%;
+				display: inline;
+				position: relative;
+				clear: both;
+				} 
+			.friends img{
+			margin: 30px;
+			box-shadow:8px 8px 8px gray;}	
+				
+			/* нижняя часть - footer */ 
+			footer 
+					{
+					height:40px;
+					padding:25px 25px 0;
+					margin:20px 0 0;
+					border-top:1px solid #0E6994;
+					} 
+					
+			/* стили для выделения областей HTML */ 
+			.tag 
+				{
+				position:absolute;
+				right:6px;top:2px;
+				font-size:11px;
+				font-style:normal;
+				} 
+			header:hover, nav:hover, section:hover, article:hover, aside:hover, footer:hover 
+																							{
+																							
+																							} 
+			section section:hover, section aside:hover 
+														{
+														
+														} 
+			section article:hover 
+									{
+									
+									} 
+			article header:hover 
+									{
+									
+									} 
+			section article .tag 
+								{
+								top:12px;
+								} 
+			article header .tag 
+								{
+								right:70px;
+								top:2px;
+								} 
+			aside .tag 
+						{
+						top:12px;
+						}
+		
+		.hovergallery img{
+	-webkit-transform:scale(0.8); 		 
+	-moz-transform:scale(0.8); 			 /*Для Mozilla*/
+	-o-transform:scale(0.8); 			 /*Для Opera*/
+	-webkit-transition-duration: 0.5s;	 /*Webkit: продолжительность анимации*/
+	-moz-transition-duration: 0.5s; 	 /*Для Mozilla*/
+	-o-transition-duration: 0.5s; 		 /*Для Opera*/
+	opacity: 0.8; 						 /*Первоначальное затемнение изображения - непрозрачность*/
+	margin: 1px; 						 /*отступы между изображениями*/
+	float:left;
+	box-shadow:10px 10px 10px gray;
+	}
+.hovergallery img:hover{
+	-webkit-transform:scale(1); 		  /*Webkit: Масштабирование изображения 1.2x от оригинального размера*/
+	-moz-transform:scale(1); 		 	  /*Для Mozilla*/
+	-o-transform:scale(1); 			  /*Для Opera*/
+	box-shadow:0px 0px 30px gray; 		  /*CSS3 тень серого цвета в 30px вокруг изображения */
+	-webkit-box-shadow:0px 0px 30px gray; /*Для Safari*/
+	-moz-box-shadow:0px 0px 30px gray;	  /*Для Mozilla*/
+	opacity: 1;}
+	nav h1 {
+            font-size: 0;
+        }
+		section h1 {
+            font-size: 0;
+        }
+		</style>
+	</head>
+	<body>
+		<div id="main"> <!-- Главный блок всей страницы (обертка) -->
+			
+			<!-- Тэг header  -->
+			<header class="h">
+			<div>
+            <img src="Images/logo.jpg" alt="logo">
+			</div>
+				<h1>мечта на теле без боли и сожалений</h1>
+				<!--<i class="tag">&lt;header&gt;</i>-->
+			</header>
+			
+			<!-- Тэг nav -->
+			<nav>
+				
+				<ul>
+					<li><a href="S.html">Главная</a></li>
+					<li><a href="Sasha.html">Обо мне</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+					<li><a href="style.html">Мой стиль тату</a></li>
+					
+					<li><a href="me.html">О разработчике</a></li>
+					
+				</ul>
+				<h1> Навигация</h1>
+				<!--<i class="tag">&lt;nav&gt;</i>-->
+			</nav>
+			<!-- Тэг section для вставки изображения логотипа -->
+			
+				
+				<!--<i class="tag">&lt;section&gt;</i>-->
+			
+			
+			<!-- Блок всего контента страницы -->
+	<section id="content">
+                          
+			<div class="hovergallery" align="center">
+			<a href="#"><img src="Images/3349_image.jpg"/></a>
+			<a href="#"><img src="Images/3345_image.jpg"/></a>
+			<a href="#"><img src="Images/3348_image.jpg"/></a>
+			<a href="#"><img src="Images/2900_image.jpg"/></a>
+			<a href="#"><img src="Images/3351_image.jpeg"/></a>
+			<a href="#"><img src="Images/3354_image.jpeg"/></a>
+			<a href="#"><img src="Images/3347_image.jpeg"/></a>
+			<a href="#"><img src="Images/2897_image.jpg"/></a>
+			<a href="#"><img src="Images/2900_image.jpg"/></a>
+			<a href="#"><img src="Images/2906_image.jpg"/></a>
+			<a href="#"><img src="Images/2899_image.jpg"/></a>
+			<a href="#"><img src="Images/2903_image.jpg"/></a>
+			<a href="#"><img src="Images/2902_image.jpg"/></a>
+			<a href="#"><img src="Images/2908_image.jpg"/></a>
+			<a href="#"><img src="Images/2904_image.jpg"/></a>
+			<a href="#"><img src="Images/2898_image.jpg"/></a>
+			</div>
+	<h1>Примеры работ</h1>
+    </section> <!-- Нижняя граница контента -->
+				<aside>
+					<h3>Мои друзья<h3>
+					<div class="friends">
+					<a href="https://vk.com/blackwhitetattoo"><img src="Images/black.jpg"></a>
+					<a href="https://foxstudio.by/"><img src="Images/lisica.jpg" ></a>
+				    <a href="https://dopeink.by/"><img src="Images/dopeink.jpg" ></a>
+					<a href="https://joker-tattoo.by/"><img src="Images/joker.png" ></a>
+					<a href="https://expositiongroup.by/"><img src="Images/exposition.jpg" ></a>
+					<a href="http://titovatattoo.by/"><img src="Images/1.jpg" ></a>
+					<a href="https://tattootwins.by/"><img src="Images/2.jpg" alt="Тату салоны"></a>
+					</div>
+					
+					<!--<i class="tag">&lt;aside&gt;</i>-->
+				</aside>
+			<!-- Авторская часть страницы footer -->
+			<footer>
+				Copyright &copy; 2021 <a href="/" rel="copyright">ИП Нестеренко</a>. All rights reserved. 
+				<br>
+				<a href="tel:+375291111111">Тел +375291111111</a>&nbsp &nbsp <a href="mailto:labelcom@mail.ru">Е-mail: Nesterenko@mail.ru</a>&nbsp &nbsp <a href="skype:test">Skype: NESTERENKO</a><br>
+
+				<!--<i class="tag">&lt;footer&gt;</i>-->
+			</footer>
+		</div> <!-- Границы главного блока (обертки) страницы -->
+	</body>
+</html>
+
